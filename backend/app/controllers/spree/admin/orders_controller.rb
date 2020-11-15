@@ -68,6 +68,10 @@ module Spree
         redirect_to cart_admin_order_url(@order)
       end
 
+      def show
+        redirect_to(action: :edit)
+      end
+
       def edit
         require_ship_address
       end
